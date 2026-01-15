@@ -4,7 +4,7 @@
 
 PES-Learn is a Python library designed to fit system-specific Born-Oppenheimer potential energy surfaces using modern machine learning models. PES-Learn assists in generating datasets, and features Gaussian process and neural network model optimization routines. The goal is to provide high-performance models for a given dataset without requiring user expertise in machine learning.
 
-This project is young and under active development. It is recommended to take a look at the [Tutorials](1_Tutorials), the [FAQ page](2_FAQ/FAQ.md), and the list of [keyword options](3_Keywords/keywords.md) before using PES-Learn for research purposes. More documentation will be added periodically. Questions and comments are encouraged; please consider submitting an issue. 
+This project is young and under active development. It is recommended to take a look at the documentation. The [Tutorials](https://ccqc.github.io/PES-Learn/guides/tutorials.html), [FAQ page](https://ccqc.github.io/PES-Learn/guides/faq.html), and the list of [keyword options](https://ccqc.github.io/PES-Learn/reference/keywords.html) are particularly useful. Questions and comments are encouraged; please consider submitting an issue. 
 
 ## Features
 
@@ -30,27 +30,19 @@ This project is young and under active development. It is recommended to take a 
 
 
 ## Installation Instructions 
-PES-Learn has been tested and developed on Linux, Mac, and Windows 10 through the Windows Subsystem for Linux. To install using `pip`:   
-Clone the repository:    
-`git clone https://github.com/adabbott/PES-Learn.git`  
-Change into top-level directory:  
-`cd PES-Learn`  
-Install PES-Learn and all dependencies:  
-`python setup.py install`  
-To avoid having to re-install the package whenever a change is made to the code, run
-`pip install -e .`  
-### Install using an Anaconda environment
-The above procedure works just fine, however for performance and stability, we recommend installing all PES-Learn dependencies in a clean Anaconda environment. 
-After installing [Anaconda for Python3](https://www.anaconda.com/distribution/), create and activate an environment:  
-```conda create -n peslearn python=3.6```  
-```conda activate peslearn```  
-The required dependencies can be installed in one line:  
-```conda install -c conda-forge -c pytorch -c omnia gpy pytorch scikit-learn pandas hyperopt cclib```   
-Then install the PES-Learn package:  
-`git clone https://github.com/adabbott/PES-Learn.git`   
-`python setup.py install`   
-`pip install -e .`  
+PES-Learn has been tested and developed on Linux, Mac, and Windows 10 through the Windows Subsystem for Linux (WSL). 
+Recommended Installation:
 
+First clone the repository:
+`git clone https://github.com/CCQC/PES-Learn.git`
+Change into top level directory:
+`cd PES-Learn`
+Create conda environment from peslearn.yml file:
+`conda env create -f peslearn.yml`
+This will create a conda environment called peslearn that contains all the dependencies needed to run peslearn. The next step is to activate the peslearn conda environment and install the `peslearn` package with pip:
+`conda activate peslearn`
+`pip install -e .`
+PES-Learn should now be ready to use! For further/alternate installation instructions please checkout the [docs](https://ccqc.github.io/PES-Learn/started/installation.html).
 
 To update PES-Learn in the future, run `git pull` while in the top-level directory `PES-Learn`.
 
@@ -71,6 +63,19 @@ Bibtex:
   pages={4386--4398},
   year={2019},
   publisher={ACS Publications}
+}
+```
+
+```
+@article{Beck2026,
+  title={Methods in PES-Learn: Direct-Fit Machine Learning of Born-Oppenheimer Potential Energy Surfaces},
+  author={Beck, Ian T and Turney, Justin M and Schaefer III, Henry F},
+  journal={Molecules},
+  volume={31},
+  number={1},
+  pages={100},
+  year={2026},
+  publisher={MDPI}
 }
 ```
 
