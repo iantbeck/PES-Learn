@@ -33,6 +33,8 @@ class InputProcessor(object):
         Find keyword definitions within the input file
         """
         # keywords which have values that are strings, not other datatypes
+        #TODO separate string keywords(?)
+        #TODO make bool keywords
         regex_keywords = {'energy_regex': None, 'gradient_header': None, 'gradient_footer': None, 
                           'gradient_line': None, 'input_name': 'input.dat', 'output_name': 'output.dat', 'pes_dir_name': 'PES_data', 'pes_name': 'PES.dat'}
         string_keywords = {'energy': None,                   # parse energies with 'cclib', 'regex', or 'schema'
@@ -75,7 +77,7 @@ class InputProcessor(object):
                            'schema_units' : 'angstrom',      # 'bohr'
                            'sort_pes': 'true',               #'false'
                            'training_points': None,          # any int
-                           'tooclose': 0.1,                  # any int
+                           'tooclose': 0.1,                  # any float
                            'use_pips': 'true',               #'false'
                            'validation_points': None         # any int
                             }

@@ -132,6 +132,8 @@ class KernelRidgeReg(Model):
                     else:
                         alphas = alphas.astype(np.float64)
                         self.set_hyperparameter('alpha', hp.choice('alpha', alphas))
+                #TODO what happens if alpha is not defined
+            #TODO throw error if self.input_obj.keywords['kernel'] == 'precomputed' and self.input_obj.keywords['precomputed_kernel'] not defined 
 
 
     def split_train_test(self, params):

@@ -50,8 +50,9 @@ To run the test suite, you need pytest: `pip install pytest-cov`
 To run tests, in the top-level directory called `PES-Learn`, run: `py.test -v tests/`
 
 ## Citing PES-Learn
-[PES-Learn: An Open-Source Software Package for the Automated Generation of Machine Learning Models of Molecular Potential Energy Surfaces ](https://pubs.acs.org/doi/10.1021/acs.jctc.9b00312)
+Paper Number 1: [PES-Learn: An Open-Source Software Package for the Automated Generation of Machine Learning Models of Molecular Potential Energy Surfaces ](https://pubs.acs.org/doi/10.1021/acs.jctc.9b00312)
 
+Paper Number 2: [Methods in PES-Learn: Direct-Fit Machine Learning of Born-Oppenheimer Potential Energy Surfaces ](https://doi.org/10.3390/molecules31010100)
 Bibtex:
 ```
 @article{Abbott2019,

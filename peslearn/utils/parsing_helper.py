@@ -59,7 +59,7 @@ def parse(input_obj, mol):
             hessian = output_obj.extract_from_schema(driver='hessian')
             return hessian
 
-    #add function to parse properties from schema
+    #TODO add function to parse properties from schema
 
     # parse original internals or interatomics?
     if input_obj.keywords['pes_format'] == 'zmat':
